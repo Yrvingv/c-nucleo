@@ -1,6 +1,6 @@
 function openWhatsApp() {
     const phoneNumber = "+5491128390182"; // Reemplaza con tu número de WhatsApp en formato internacional
-    const message = "¡Hola! Me gustaría obtener más información sobre ElevatePRO."; // Mensaje predefinido
+    const message = "¡Hola! Me gustaría obtener más información sobre c-Núcleo😊."; // Mensaje predefinido
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
 }
