@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EHBY3VF5X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5EHBY3VF5X');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-NÚCLEO | Coaching</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="/static/images/logo.png" alt="ElevatePRO Logo" class="logo">
+            <span>c-núcleo</span>
+        </div>
+
+        <nav class="header-nav">
+            <!-- Botón de menú hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            <!-- Lista de enlaces -->
+            <ul class="nav-links">
+                <li><a href="#services">Qué es?  </a></li>
+                <li><a href="#stages">Coaching  </a></li>
+                <li><a href="#miapp">app c-Núcleo😊  </a></li>
+                <li><a href="#date">Quiero una cita!  </a></li>
+                <li><a href="#contact">Contactos  </a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Botón flotante de WhatsApp -->
+    <button class="whatsapp-button" onclick="openWhatsApp()">
+        WhatsApp
+    </button>
+
+
+    <main>
+        <!-- Sección 1: Video de Fondo -->
+        <section class="video-section">
+            <video autoplay muted loop playsinline id="background-video">
+                <source src="/static/images/video1.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <div class="animated-text">
+                <p>¿Sabes qué te motiva realmente? Descubre la raíz de tus decisiones y fortalezas</p>
+            </div>
+            <div class="animated-text2">
+                <p>Reconoce tus fortalezas y aprende cómo usarlas para transformar tus resultados</p>
+            </div>
+            <div class="animated-text3">
+                <p>Convierte tus desafíos en oportunidades con un plan hecho solo para ti</p>
+            </div>
+
+        </section>
+
+        <!-- Sección 2: Definición del Servicio -->
+        <section id="services" class="service-definition">
+            <div class="content-container">
+                <div class="text-section">
+                    <h2 class="glowing-text">¿Qué es c-Núcleo?</h2>
+                    <p>Programa de coaching donde combinamos tecnología avanzada (IA) con un proceso personalizado para identificar tus
+                        fortalezas y diseñar estrategias efectivas que te permitan superar desafíos profesionales y
+                        alcanzar tus metas.
+                        Diseñamos planes personalizados que alinean tus metas profesionales con tus valores, garantizando resultados
+                        sostenibles y transformadores.</p>
+                </div>
+                <div class="image-section">
+                    <img src="/static/images/service-image.jpg" alt="Coaching" />
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Suave entre Sección 3 y 4 -->
+        <div class="cta-soft">
+            <p>Descubre cómo c-Núcleo puede transformar tu vida profesional. Explora las etapas de nuestro coaching profesional a
+                continuación</p>
+        </div>
+
+        <!-- Sección 3: Etapas del Coaching -->
+        <section id="stages" class="coaching-stages">
+            <h2 class="glowing-text">Cómo trabajaremos...?</h2>
+            <p class="description">En c-Núcleo, seguimos un proceso estructurado para identificar y maximizar tus
+                fortalezas y ayudarte a alcanzar tus metas. Cada etapa está diseñada para abordar tus necesidades específicas y
+                garantizar tu éxito.
+            </p>
+            <!-- Caja para la Imagen -->
+            <div class="image-box">
+                <img src="/static/images/proceso.png" alt="Coaching Process" />
+            </div>
+            <div class="stages-container">
+                <!-- Etapa 1: Valoración -->
+                <div class="stage-card">
+                    <img src="/static/images/valuation.png" alt="Valoración Icono" class="stage-icon" />
+                    <h3 class="glowing-text">Valoración</h3>
+                    <p>Evaluamos tus fortalezas y motivaciones con nuestra app de IA (c-núcleo), diagnosticándote en bienestar, 
+                        conflicto y potencial personal.</p>
+                    <p>Beneficios:</p>    
+                    <ul class="custom-bullets">
+                        <li>Lograrás el conocimiento profundo de tí mismo.</li>
+                        <li>Damos los fundamentos para la mejora de tus relaciones interpersonales.</li>
+                        <li>Te enseñamos a gestionar tus desafíos y conflictos.</li>
+                    </ul>
+                </div>
+                <!-- Etapa 2: Estrategia -->
+                <div class="stage-card">
+                    <img src="/static/images/strategy.png" alt="Estrategia Icono" class="stage-icon" />
+                    <h3 class="glowing-text">Estrategia</h3>
+                    <p>Diseñamos un plan estratégico personalizado basado en tus motivaciones y fortalezas, 
+                        alineado con tus metas y enfocado en acciones claras.</p>
+                    <p>Beneficios:</p>
+                    <ul class="custom-bullets">
+                        <li>Establecimiento de una meta transformadora con un objetivo central.</li>
+                        <li>Potenciación de habilidades y confianza en sus capacidades</li>
+                        <li>Plan de acciones y recursos adecuados a tí.</li>
+                    </ul>
+                </div>
+                <!-- Etapa 3: Crecimiento -->
+                <div class="stage-card">
+                    <img src="/static/images/growth.png" alt="Crecimiento Icono" class="stage-icon" />
+                    <h3 class="glowing-text">Crecimiento</h3>
+                    <p>Implementamos el plan mediante sesiones, retroalimentación y hábitos diarios, fundado en los resultados de la App e-núcleo.</p>
+                    <p>Beneficios:</p>
+                    <ul class="custom-bullets">
+                        <li>Micro-acciones orientadas a mejorar la claridad en la profesión para lograr metas</li>
+                        <li>Retroalimentación constante (Accountability Partner).</li>
+                        <li>Desarrollo de habilidades y confianza en sus capacidades.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Sección 4: App Tickers -->
+
+        <section id="miapp" class="image-ticker">
+            <h2 class="glowing-text">Descubre Tu Potencial con c-NÚCLEO 😊</h2>
+            <div class="ticker-wrapper">
+                <div class="ticker-content">
+                    <img src="/static/images/tickerser/1.png" alt="Foto 1">
+                    <img src="/static/images/tickerser/2.png" alt="Foto 2">
+                    <img src="/static/images/tickerser/3.png" alt="Foto 3">
+                    <img src="/static/images/tickerser/4.png" alt="Foto 4">
+                    <img src="/static/images/tickerser/5.png" alt="Foto 5">
+                    <img src="/static/images/tickerser/6.png" alt="Foto 6">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Call to Action con Calendario -->
+        <section id="date" class="call-to-action">
+            <h2>¡Reserva Tu Sesión Hoy!</h2>
+            <p>Agenda tu cita de 10min, sin compromiso y descubre cómo c-núcleo puede transformar tu vida profesional
+                y personal.
+            </p>
+            <div class="calendar-button">
+                <!-- Botón de Google Calendar -->
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                    (function () {
+                        var target = document.currentScript;
+                        window.addEventListener('load', function () {
+                            calendar.schedulingButton.load({
+                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2sk3NFyxU_bm5QwFzEXLEhaZ-QyLJdYGxEqaSQCEOvBejRuBwE6fmxcujID7n5PVKVCpA7EQs7?gv=true',
+                                color: '#3F51B5',
+                                label: 'Reservar una cita',
+                                target,
+                            });
+                        });
+                    })();
+                </script>
+            </div>
+        </section>
+
+        <!-- Sección 6. Contacto -->
+        <section id="contact" id="contact" class="contact-section">
+            <h2 class="glowing-text">Contáctanos</h2>
+            <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte! Escríbenos a través de nuestras redes sociales o por
+                WhatsApp.</p>
+            <div class="contact-links">
+                <a href="https://wa.me/+5491128390182" target="_blank" class="contact-button">WhatsApp</a>
+                <a href="mailto:yrving.viera@gmail.com" target="_blank" class="contact-button">Correo</a>
+            </div>
+        </section>
+
+        <!-- Sección 7: Footer -->
+        <footer class="footer">
+            <div class="social-media">
+                <a href="https://www.instagram.com/cnucleo/" target="_blank">
+                    <img src="/static/images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/yrvingv" target="_blank">
+                    <img src="/static/images/x.png" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com/ageelprojects?locale=es_LA" target="_blank">
+                    <img src="/static/images/facebook.png" alt="Facebook">
+                </a>
+            </div>
+            <p>&copy; 2025 c-Núcleo. Todos los derechos reservados.</p>
+        </footer>
+
+        <button id="back-to-top" class="back-to-top" aria-label="Regresar al inicio">
+            <img src="/static/images/up.png" alt="Regresar al inicio">
+        </button>
+
+
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
