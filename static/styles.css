@@ -183,22 +183,25 @@ p, li, a {
 
 
 
-/* Sección 1: Video de Fondo */
-.video-section {
+/* Sección 1: Imagen Principal de Fondo */
+
+.image-section {
     position: relative;
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden;
+    background-color: #000; /* Color de fondo como fallback */
 }
 
-#background-video {
+#background-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda la sección */
+    object-fit: cover; /* Asegura que la imagen cubra toda la sección */
     z-index: 0;
+    border-radius: 0; /* Bordes completamente rectos */
 }
 
 /* Contenedor de texto animado */
@@ -249,14 +252,13 @@ p, li, a {
 
 /* Responsividad para 400px */
 @media (max-width: 400px) {
-    .video-section {
-        height: 30vh;
+    .image-section {
+        height: 30vh; /* Reduce la altura en pantallas pequeñas */
     }
 
-    #background-video {
-        object-fit: left; /* Asegura que el video encaje en pantallas pequeñas */
+    #background-image {
+        object-fit: contain; /* Asegura que la imagen encaje sin cortar en pantallas pequeñas */
     }
-
     .animated-text {
         top: 40%;
         font-size: 200%;
@@ -278,13 +280,7 @@ p, li, a {
 
 /* Configuración para monitores (1024px o más) */
 @media (min-width: 1024px) {
-    .video-section {
-        height: 100vh;
-    }
 
-    #background-video {
-        object-fit: cover; /* Asegura que el video llene el espacio */
-    }
 
     .animated-text {
         top: 40%;
@@ -312,23 +308,28 @@ p, li, a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 2px;
+    padding: 20px 2px;
     background-color: #000000; /* Fondo oscuro */
     color: #ffffff;
     text-align: center;
+    margin-top: 20px;
 }
-
+* {
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño del elemento */
+}
 .content-container {
     display: flex;
     flex-wrap: wrap; /* Permitir que los elementos se apilen en pantallas pequeñas */
     max-width: 1200px;
     width: 100%;
     gap: 30px;
+    margin-bottom: 10px;
+    
 }
 
 .text-section {
     flex: 1;
-    padding: 2px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -346,15 +347,16 @@ p, li, a {
     text-align: justify; /* Justificar el texto */
 }
 
-.image-section {
+.image-section2 {
     flex: 1;
     text-align: center;
+    margin-top: 30px;
 }
 
-.image-section img {
+.image-section2 img {
     max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
     height: auto;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 0px; /* Bordes redondeados */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -384,8 +386,8 @@ p, li, a {
         margin-left: 5%;
     }
 
-    .image-section img {
-        border-radius: 15px; /* Bordes más pequeños */
+    .image-section2 img {
+        border-radius: 0px; /* Bordes más pequeños */
     }
 }
 
@@ -399,8 +401,8 @@ p, li, a {
         font-size: 1.5rem; /* Texto más grande */
     }
 
-    .image-section img {
-        border-radius: 15px; /* Bordes más destacados */
+    .image-section2 img {
+        border-radius: 0px; /* Bordes más destacados */
     }
 }
 
