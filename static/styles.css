@@ -1,7 +1,7 @@
 /* Estilo base y colores */
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif; /* Inter como fuente principal */
+    font-family: 'poppins', sans-serif; /* Inter como fuente principal */
     background-color: #000000; /* Fondo negro puro */
     color: #ffffff; /* Texto blanco */
 }
@@ -846,3 +846,29 @@ p, li, a {
 
 /* FIN ticker*/
 
+.hero-cta {
+  position: absolute;
+  top: 78%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: #3F51B5;     /* mismo color del calendario */
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(63,81,181,.35);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(63,81,181,.5);
+}

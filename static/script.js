@@ -1,8 +1,11 @@
 function openWhatsApp() {
-    const phoneNumber = "+5491128390182"; // Reemplaza con tu número de WhatsApp en formato internacional
-    const message = "¡Hola! Me gustaría obtener más información sobre c-Núcleo😊."; // Mensaje predefinido
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
+  try {
+    gtag('event', 'lead_whatsapp_click', {location: 'floating_button'});
+  } catch(e) {}
+  const phoneNumber = "+543813594194";
+  const message = "¡Hola! Me gustaría obtener más información sobre c-Núcleo😊.";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -101,3 +104,39 @@ document.addEventListener("DOMContentLoaded", function () {
       tickerContent.style.animationPlayState = "running";
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const target = document.querySelector('.calendar-button');
+  if (!target) return;
+
+  const obs = new MutationObserver(() => {
+    const btn = target.querySelector('a,button');
+    if (btn && !btn.dataset._tracked) {
+      btn.dataset._tracked = '1';
+      btn.addEventListener('click', () => {
+        try { gtag('event','sesion_cero_click',{location:'calendar_section'}); } catch(e){}
+      });
+    }
+  });
+  obs.observe(target, { childList: true, subtree: true });
+});
+
+
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="mailto:"]');
+  if (a) {
+    try { gtag('event','contact_email_click',{href:a.href}); } catch(e){}
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ctaHero = document.getElementById('cta-hero');
+  if (ctaHero) {
+    ctaHero.addEventListener('click', () => {
+      try { gtag('event','cta_hero_click',{destination:'#date'}); } catch(e){}
+    });
+  }
+});
+
+
+
